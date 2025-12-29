@@ -5,12 +5,12 @@ __pycache__/
 readme.txt
 # *.log
 tests/
-app.bat
-LICENSE
-myapplication.wsgi
-myappname.py
-Procfile
-runtime.txt
-service.py
+# app.bat
+# LICENSE
+# myapplication.wsgi
+# myappname.py
+# Procfile
+# runtime.txt
+# service.py
 appmain/dbaccessmongodb.py
 appmain/dbaccesspostgresql.py
