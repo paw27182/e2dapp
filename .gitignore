@@ -4,6 +4,8 @@
 __pycache__/
 # *.log
 tests/
+algo_azure/
+algo_general/
 app.bat
 LICENSE
 myapplication.wsgi
@@ -13,3 +15,4 @@ runtime.txt
 service.py
 appmain/dbaccessmongodb.py
 appmain/dbaccesspostgresql.py
+# appml/templates/appmlarea4Parameters_appml.html
