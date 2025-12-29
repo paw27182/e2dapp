@@ -1,0 +1,9 @@
+algorithm, R^2(train), R^2(test), elapsed_time
+GradientBoostingRegressor,0.8591,0.8446,0.3573
+RandomForestRegressor,0.8291,0.8405,0.7061
+DecisionTreeRegressor,0.7167,0.7804,0.0160
+KNeighborsRegressor,0.6803,0.7690,0.0075
+LinearRegression,0.7100,0.5754,0.0217
+SGDRegressor,0.7503,0.5694,0.0092
+LinearSVR,0.7232,0.5058,0.0095
+

@@ -1,0 +1,18 @@
+.idea
+.vscode
+*.pyc
+__pycache__/
+readme.txt
+# *.log
+tests/
+app.bat
+LICENSE
+myapplication.wsgi
+myappname.py
+Procfile
+runtime.txt
+service.py
+appmain/dbaccessmongodb.py
+appmain/dbaccesspostgresql.py
+auth/auth_bp_Azure.py
+auth/auth_bp_General.py
