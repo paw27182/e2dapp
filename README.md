@@ -22,7 +22,7 @@
 <br>
 
 * Program start
-  * cd e2dapp-flask
+  * cd e2dapp
   * python.exe app.py
 
 <br>
@@ -45,19 +45,18 @@
 <br>
 
 # 4. Undisclosed Functions
-* Authentication(Sign up, Change password)
 * Database(PostgreSQL, MongoDB)
 * Machine Learning
 
 <br>
 
 # 5. Initialization
-(1) To sign-up a database administrator [UNDISCLOSED]<br>
-(2) The database administrator submits the following control files: [UNDISCLOSED]<br>
+(1) To sign-up a database administrator<br>
+(2) The database administrator submits the following control files:<br>
    * database_info_entry.xlsx<br>
    * group_info_entry.xlsx(group administrators information)<br>
 
-(3) To sigh-up a group administrator [UNDISCLOSED]<br>
+(3) To sigh-up a group administrator<br>
 (4) The group administrator submits the following control files:<br>
   * form_info_entry.xlsx(sumittable forms information）<br>
   * group_info_entry.xlsx(user information)
