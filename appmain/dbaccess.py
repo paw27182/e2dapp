@@ -122,7 +122,7 @@ class DBAccess(DBAbstractClass):
         else:  # "show_all_the_items" in command:
             sql = f"SELECT {col} FROM '{self.tablename}' ORDER BY {order_by} ASC;"
 
-        print(f"[{mid}] {sql= }")
+        # print(f"[{mid}] {sql= }")
 
         with sqlite3.connect(self.connect_str) as conn:
             cur = conn.execute(sql)

@@ -8,7 +8,7 @@ BASE_DIR = current_app.config.get("BASE_DIR")  # ./e2d-flask
 
 # flask
 # SECRET_KEY = b'the human story...'
-SECRET_KEY = os.urandom(10)  # ex.) b'Z\xc3\xe3\xe2\xd7\xae\xd5\x85\xa8\x86'
+SECRET_KEY = os.urandom(10)
 
 # database
 database_type = current_app.config["DATABASE_TYPE"]
@@ -16,7 +16,6 @@ database_type = current_app.config["DATABASE_TYPE"]
 if database_type in ["SQLite3", "MongoDB"]:
     # SQLALCHEMY_DATABASE_URI = 'sqlite:///database/db_admin.sqlite3'
     SQLALCHEMY_DATABASE_URI = f'sqlite:///{os.getcwd()}/database/db_admin.sqlite3'  # absolute path
-    # SQLALCHEMY_DATABASE_URI = f'sqlite:////mnt/f/GDrive/Programming/Python/MyProject/TekapawSoft/e2d-folder/e2dapp/database/db_admin.sqlite3'
     # SQLALCHEMY_DATABASE_URI = 'mongodb://user1:user1@127.0.0.1:27017/db_admin'  # unsupported
 
 elif database_type in ["PostgreSQL"]:

@@ -45,28 +45,12 @@ $(function () {
             $('#btn_execute').prop("disabled", true);
             $('#btn_execute').text("Executing...");
 
-            // const csrf_token = getCookie('csrftoken');
-            // console.log('[topview.js] csrf_token= ', csrf_token);
-
-            var csrf_token = "{{ csrf_token() }}";
-            
-            $.ajaxSetup({
-                beforeSend: function(xhr, settings) {
-                    if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {
-                        xhr.setRequestHeader("X-CSRFToken", csrf_token);
-                    }
-                }
-            });
-
             $.ajax({
                 url: '/appmain',
                 type: 'POST',
                 data: formData,
-                // data: JSON.stringify(formData),             
                 processData: false,
                 contentType: false,
-                // contentType: "application/json",
-                // dataType: "json",
             })
                 .done(function (output, status, xhr) {
                     $('#area4Result').html(output);
@@ -161,20 +145,3 @@ $(function () {
         $('#area4Result').hide();
     });
 });
-
-
-// function getCookie(name) {
-//     let cookieValue = null;
-//     if (document.cookie && document.cookie !== '') {
-//         const cookies = document.cookie.split(';');
-//         for (let i = 0; i < cookies.length; i++) {
-//             const cookie = cookies[i].trim();
-//             // Does this cookie string begin with the name we want?
-//             if (cookie.substring(0, name.length + 1) === (name + '=')) {
-//                 cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-//                 break;
-//             }
-//         }
-//     }
-//     return cookieValue;
-// }

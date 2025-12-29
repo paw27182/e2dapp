@@ -1,3 +1,18 @@
+"""
+"submit" flow (Navigation TAB: Entry - Submit a form)
+    -> appmain/static/html/submit.html
+    -> appmain/static/js/appmain.js
+    -> appmain/appmain_bp.py
+    -> render_template('area4Submit.html')
+
+"inquire" flow (Navigation TAB: Inquire - Get a list of forms)
+    -> appmain/static/html/inquire.html
+    -> appmain/static/js/appmain.js
+    -> appmain/static/appmain_bp.py
+    -> render_template('area4Inquire.html')
+
+Update: June 30, 2023
+"""
 import logging
 import logging.handlers
 from pathlib import Path
@@ -18,11 +33,9 @@ def create_app():
     csrf.init_app(app)
     app.config['csrf'] = csrf
 
-    # app.config['SESSION_COOKIE_SECURE'] = False
-
     # set context
     with app.app_context():
-        app.config.from_object("settings")  # public information日立　真鶴荘
+        app.config.from_object("settings")  # public information
         if "development" in app.config.get("ENVIRONMENT"):
             app.config.from_pyfile(
                 Path("instance", "config", "development.py"), silent=True)
