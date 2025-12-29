@@ -15,4 +15,6 @@ runtime.txt
 service.py
 appmain/dbaccessmongodb.py
 appmain/dbaccesspostgresql.py
-# appml/templates/appmlarea4Parameters_appml.html
+appml/templates/appml/area4Parameters_appml.html
+appml/templates/appml/area4Inquire_appml_general.html
+appml/templates/appml/area4Inquire_appml_azure.html
