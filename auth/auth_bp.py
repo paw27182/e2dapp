@@ -3,10 +3,8 @@ import re
 from pathlib import Path
 
 import numpy as np
-from flask import (Blueprint, current_app, redirect, render_template, request,
-                   session)
-from flask_login import (LoginManager, current_user, login_required,
-                         login_user, logout_user)
+from flask import Blueprint, current_app, redirect, render_template, request, session
+from flask_login import LoginManager, current_user, login_required, login_user, logout_user
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from models.models import UserInfo, db
@@ -67,7 +65,30 @@ def login():
 @auth_bp.route("/signup", methods=['GET', 'POST'])
 def signup():
     if request.method == "POST":
-        return json.dumps({"status": "sorry, UNDISCLOSED"})
+        username = request.form.get("username")
+        password = request.form.get("password")
+        password_confirm = request.form.get("password_confirm")
+
+        pattern = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+        if not re.match(pattern, username):
+            return json.dumps({"status": "NG", "message": "invalid email address"})
+
+        if password != password_confirm:
+            return json.dumps({"status": "NG", "message": "password unmatch"})
+
+        users = [item[0] for item in db.session.query(UserInfo.username).all()]
+        if username in users:
+            return json.dumps({"status": "NG", "message": "NG. user already exists."})
+
+        user = UserInfo(username=username,
+                        password=generate_password_hash(password, method='scrypt'),  # obsolete: method='sha256'
+                        modified_by=username)
+        db.session.add(user)
+        db.session.commit()
+        return redirect("/login")  # slash
+
+        # # FIXME in case e2d-flask
+        # return json.dumps({"status": "sorry, UNDISCLOSED"})
     else:
         return render_template('signup.html')
 
@@ -76,7 +97,30 @@ def signup():
 @auth_bp.route("/changepassword", methods=['GET', 'POST'])
 def changepassword():
     if request.method == "POST":
-        return json.dumps({"status": "sorry, UNDISCLOSED"})
+        username = request.form.get("username")
+        password = request.form.get("password")
+        new_password = request.form.get("new_password")
+        new_password_confirm = request.form.get("new_password_confirm")
+
+        user = UserInfo.query.filter_by(
+            username=username).first()  # search User table
+        if not user:
+            return json.dumps({"status": "NG", "message": "NG. email address unmatch"})
+
+        if not check_password_hash(user.password, password):
+            return json.dumps({"status": "NG", "message": "NG. password unmatch"})
+
+        if new_password != new_password_confirm:
+            return json.dumps({"status": "NG", "message": "new password unmatch"})
+
+        user.password = generate_password_hash(new_password, method='scrypt')  # obsolete: method='sha256'
+        user.modified_by = username
+        db.session.add(user)
+        db.session.commit()
+        return redirect("/login")  # slash
+
+        # # FIXME in case e2d-flask
+        # return json.dumps({"status": "sorry, UNDISCLOSED"})
     else:
         return render_template('changepassword.html')
 
