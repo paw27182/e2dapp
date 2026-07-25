@@ -1,0 +1,25 @@
+ 2025-12-29 17:40:18,641 - app - INFO - Logging Starts.
+ 2025-12-29 17:40:49,929 - app - INFO - ++++++ login +++ sakura.suwa@example.com
+ 2025-12-29 17:40:54,818 - app - INFO - [appmain_bp.py] --- @appmain_bp.route("/appmain") user= 'sakura.suwa@example.com' -----
+ 2025-12-29 17:40:56,906 - app - INFO - [appml_bp.py] --- @appml_bp.route("/appml") user= 'sakura.suwa@example.com' -----
+ 2025-12-29 17:41:05,459 - app - INFO - [appml_bp.py] --- @appml_bp.route("/appml") user= 'sakura.suwa@example.com' -----
+ 2025-12-29 17:41:07,539 - app - INFO - +++++ logout +++ sakura.suwa@example.com
+ 2025-12-29 17:42:14,016 - app - INFO - ++++++ login +++ sakura.suwa@example.com
+ 2025-12-29 17:42:16,205 - app - INFO - [appml_bp.py] --- @appml_bp.route("/appml") user= 'sakura.suwa@example.com' -----
+ 2025-12-29 17:42:21,863 - app - INFO - +++++ logout +++ sakura.suwa@example.com
+ 2025-12-29 17:42:39,716 - app - INFO - Logging Starts.
+ 2025-12-29 17:42:48,034 - app - INFO - ++++++ login +++ sakura.suwa@example.com
+ 2025-12-29 17:42:50,325 - app - INFO - [appml_bp.py] --- @appml_bp.route("/appml") user= 'sakura.suwa@example.com' -----
+ 2025-12-29 17:42:54,021 - app - INFO - [appml_bp.py] --- @appml_bp.route("/appml") user= 'sakura.suwa@example.com' -----
+ 2025-12-29 17:43:10,253 - app - INFO - [appml_bp.py] --- @appml_bp.route("/appml") user= 'sakura.suwa@example.com' -----
+ 2025-12-29 17:43:13,706 - app - INFO - [appml_bp.py] --- @appml_bp.route("/appml") user= 'sakura.suwa@example.com' -----
+ 2025-12-29 17:43:21,705 - app - INFO - +++++ logout +++ sakura.suwa@example.com
+ 2026-04-24 07:49:29,910 - app - INFO - Logging Starts.
+ 2026-04-24 07:49:53,490 - app - INFO - ++++++ login +++ sakura.suwa@example.com
+ 2026-04-24 07:49:57,099 - app - INFO - [appml_bp.py] --- @appml_bp.route("/appml") user= 'sakura.suwa@example.com' -----
+ 2026-04-24 07:50:01,194 - app - INFO - [appml_bp.py] --- @appml_bp.route("/appml") user= 'sakura.suwa@example.com' -----
+ 2026-04-24 07:50:22,492 - app - INFO - +++++ logout +++ sakura.suwa@example.com
+ 2026-07-25 17:44:52,672 - app - INFO - Logging Starts.
+ 2026-07-25 17:45:12,493 - app - INFO - ++++++ login +++ sakura.suwa@example.com
+ 2026-07-25 17:45:39,831 - app - INFO - [appmain_bp.py] --- @appmain_bp.route("/appmain") user= 'sakura.suwa@example.com' -----
+ 2026-07-25 17:45:50,270 - app - INFO - +++++ logout +++ sakura.suwa@example.com
