@@ -23,3 +23,16 @@
  2026-07-25 17:45:12,493 - app - INFO - ++++++ login +++ sakura.suwa@example.com
  2026-07-25 17:45:39,831 - app - INFO - [appmain_bp.py] --- @appmain_bp.route("/appmain") user= 'sakura.suwa@example.com' -----
  2026-07-25 17:45:50,270 - app - INFO - +++++ logout +++ sakura.suwa@example.com
+ 2026-07-25 18:04:57,491 - app - INFO - ++++++ login +++ sakura.suwa@example.com
+ 2026-07-25 18:05:10,207 - app - INFO - [appml_bp.py] --- @appml_bp.route("/appml") user= 'sakura.suwa@example.com' -----
+ 2026-07-25 18:05:13,981 - app - INFO - [appml_bp.py] --- @appml_bp.route("/appml") user= 'sakura.suwa@example.com' -----
+ 2026-07-25 18:05:17,358 - app - INFO - [appmain_bp.py] --- @appmain_bp.route("/appmain") user= 'sakura.suwa@example.com' -----
+ 2026-07-25 18:05:22,608 - app - INFO - +++++ logout +++ sakura.suwa@example.com
+ 2026-10-04 11:05:10,661 - app - INFO - Logging Starts.
+ 2026-10-04 11:07:46,471 - app - INFO - ++++++ login +++ sakura.suwa@example.com
+ 2026-10-04 11:07:50,274 - app - INFO - [appml_bp.py] --- @appml_bp.route("/appml") user= 'sakura.suwa@example.com' -----
+ 2026-10-04 11:08:49,989 - app - INFO - ++++++ login +++ sakura.suwa@example.com
+ 2026-10-04 11:09:09,286 - app - INFO - Logging Starts.
+ 2026-10-04 11:09:18,940 - app - INFO - ++++++ login +++ sakura.suwa@example.com
+ 2026-10-04 11:09:28,154 - app - INFO - [appmain_bp.py] --- @appmain_bp.route("/appmain") user= 'sakura.suwa@example.com' -----
+ 2026-10-04 11:09:30,618 - app - INFO - +++++ logout +++ sakura.suwa@example.com

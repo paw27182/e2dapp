@@ -28,15 +28,15 @@
 <br>
 
 * Open browser
-  * http://localhost:8000/login
+  * http://localhost:8000/
   * Login Email address/Password: sakura.suwa@example.com/helloe2d
 
 <br>
 
 # 3. System
-* OS: Windows 10/11, Ubuntu 20.04.6 LTS, Azure Web App(Linux)
+* OS: Windows 11, Ubuntu 20.04.6 LTS, Azure Web App(Linux)
 * Web Framework: Flask
-* Python 3.13.14
+* Python 3.13.16
 * Python Libraries: See requirements.txt
 * Bootstrap 5.2.3
 * jQuery 3.7.1
